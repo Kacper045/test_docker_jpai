@@ -1,0 +1,9 @@
+    3  git clone https://github.com/Kacper045/test_docker_jpai.git
+    5  cd test_docker_jpai
+   12  docker build -t kolokwium:latest .
+   13  docker -d -p 3000:3000 kontener kolokwium:latest
+   14  docker run -d -p 3000:3000 kontener kolokwium:latest
+   15  docker run -d -p 3000:3000 --name kontener kolokwium:latest
+   17  docker rm -f kontener
+   18  docker rm -f kolokwium:latest
+   19  history | grep docker | tee docker.log
